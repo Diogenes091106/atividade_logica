@@ -25,11 +25,11 @@ void Mostrar(PESSOA x)
 
 void PreencherPessoa(PESSOA *p)
 {
-    // Lee o nome 
+    
     printf("Digite o nome: ");
     fgets(p->Nome, sizeof(p->Nome), stdin);
 
-    // Remove o caractere da linha nova
+    
     p->Nome[strcspn(p->Nome, "\n")] = '\0';
 
     // Limpeza do buffer
@@ -42,28 +42,28 @@ void PreencherPessoa(PESSOA *p)
     // Limpeza do buffer
     while (getchar() != '\n');
 
-    // Leitura do salário
+    
     printf("Digite o salario: ");
     scanf("%f", &p->Salario);
 
     // Limpeza do buffer 
     while (getchar() != '\n');
 
-    // Leitura do dia de nascimento
+    
     printf("Digite o dia de nascimento: ");
     scanf("%d", &p->Nasc.Dia);
 
     // Limpeza do buffer 
     while (getchar() != '\n');
 
-    // Leitura do mês de nascimento
+    
     printf("Digite o mes de nascimento: ");
     scanf("%d", &p->Nasc.Mes);
 
     // Limpeza do buffer 
     while (getchar() != '\n');
 
-    // Leitura do ano de nascimento
+    
     printf("Digite o ano de nascimento: ");
     scanf("%d", &p->Nasc.Ano);
 
@@ -75,10 +75,10 @@ int main()
 {
     PESSOA p;
 
-    // Preencher a estrutura PESSOA
+    // estrutura PESSOA
     PreencherPessoa(&p);
 
-    // Exibição das informações do usuario
+    // informações do usuario
     Mostrar(p);
 
     return 0;
